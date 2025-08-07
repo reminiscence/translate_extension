@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang=en>
+    <meta charset=utf-8>
+    <head>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="item_wrap">
+            <div class="title">1. 번역</div>
+            <div class="sub_title">- 크롬에서만 지원되며, 본문을 드래그하면 한국어로 번역됩니다. (영어/일본어만 지원)</div>
+            <button id="toggle_button" class="off">Off</button>
+        </div>
+        <div class="item_wrap">
+            <div class="title">2. 단어 사전</div>
+            <div class="sub_title">- 크롬에서만 지원되며, 언어 선택 및 번역하고 싶은 단어를 input 에 입력 후 클릭해주세요.</div>
+            <div class="selected_lng">
+                <label for="srcLng">start: </label>
+                <select id="srcLng">
+                    <option name="srcLng" value="ko" selected>한국어</option>
+                    <option name="srcLng" value="en">영어</option>
+                    <option name="srcLng" value="ja">일본어</option>
+                </select>
+                <div>→</div>
+                <label for="targetLng">end: </label>
+                <select id="targetLng">
+                    <option name="targetLng" value="ko">한국어</option>
+                    <option name="targetLng" value="en" selected>영어</option>
+                    <option name="targetLng" value="ja">일본어</option>
+                </select>
+            </div>
+            <label>
+                <input class="trans_target_input" type="text" />
+            </label>
+            <button class="translate">번역</button>
+            <div class="trans_result"></div>
+        </div>
+        <script src="popup.js"></script>
+    </body>
+</html>
